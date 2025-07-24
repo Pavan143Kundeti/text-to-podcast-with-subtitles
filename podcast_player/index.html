@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Offline Podcast Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Offline Podcast Player</h1>
+  <audio id="audio" controls>
+    <source src="output.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+  <div id="subtitles"></div>
+  <script>
+    // Simple SRT parser
+    function parseSRT(data) {
+      const pattern = /\d+\s+([\d:,]+) --> ([\d:,]+)\s+([\s\S]*?)(?=\n\d+|$)/g;
+      let result = [], match;
+      while ((match = pattern.exec(data)) !== null) {
+        result.push({
+          start: toSeconds(match[1]),
+          end: toSeconds(match[2]),
+          text: match[3].replace(/\n/g, ' ')
+        });
+      }
+      return result;
+    }
+    function toSeconds(time) {
+      const [h, m, s] = time.split(':');
+      const [sec, ms] = s.split(',');
+      return (+h) * 3600 + (+m) * 60 + (+sec) + (+ms) / 1000;
+    }
+    fetch('subtitles.srt')
+      .then(r => r.text())
+      .then(srt => {
+        const subs = parseSRT(srt);
+        const audio = document.getElementById('audio');
+        const subsDiv = document.getElementById('subtitles');
+        function updateSub() {
+          const t = audio.currentTime;
+          const current = subs.find(s => t >= s.start && t <= s.end);
+          subsDiv.textContent = current ? current.text : '';
+        }
+        audio.addEventListener('timeupdate', updateSub);
+      });
+  </script>
+</body>
+</html> 

@@ -1,0 +1,33 @@
+🎙️ Podcast Title: "Digital Bytes"
+Episode 1: The Rise of Artificial Intelligence
+
+Speaker A (Host):
+"Hello everyone, and welcome to Digital Bytes! I’m your host, Ananya. In today’s episode, we’re diving into the world of Artificial Intelligence — what it is, why it matters, and how it’s changing our lives."
+
+Speaker B (Guest):
+"Hi Ananya, thanks for having me! I’m excited to talk about AI. It’s one of the most revolutionary technologies of our time."
+
+Speaker A:
+"Absolutely! Let’s start with the basics. What exactly is Artificial Intelligence?"
+
+Speaker B:
+"AI refers to machines or software that can mimic human intelligence. This includes learning from data, recognizing speech or images, and even making decisions."
+
+Speaker A:
+"That’s fascinating. We use AI in so many places now — from Google Maps to ChatGPT, right?"
+
+Speaker B:
+"Exactly. And AI is also helping doctors detect diseases early, automating industries, and even making our smartphones smarter."
+
+Speaker A:
+"But with great power comes great responsibility. What about the concerns around job losses or bias in AI?"
+
+Speaker B:
+"Those are valid concerns. It’s important that we build AI ethically — ensuring transparency, fairness, and accountability."
+
+Speaker A:
+"Very well said. And that brings us to the end of today’s episode. Thanks, everyone, for tuning in to Digital Bytes. Don’t forget to subscribe, and we’ll catch you in the next episode!"
+
+Speaker B:
+"Thanks again, Ananya! It was a pleasure being here."
+
